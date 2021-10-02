@@ -7,6 +7,6 @@
 
 ## Requirements
 
-1.  Polybar
-2.  font Awesome
-3.  iosevka
+1.  [**Polybar**](https://github.com/polybar/polybar)
+2.  [**Font Awesome**](https://github.com/FortAwesome/Font-Awesome)
+3.  [**Iosevka**](https://github.com/be5invis/Iosevka)
