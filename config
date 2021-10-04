@@ -220,7 +220,7 @@ format-connected-underline = #55aa55
 # não tá funcionando
 format-connected-prefix = ""
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+label-connected = %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -251,7 +251,7 @@ format-volume = <ramp-volume> <bar-volume>
 label-volume = 
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted =sound muted
 
