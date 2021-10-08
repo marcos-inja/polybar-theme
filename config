@@ -68,7 +68,7 @@ modules-left = i3
 ; modules-center = 
 ;modules-right = cpu memory xbacklight battery alsa filesystem pulseaudio xkeyboard wlan eth temperature date powermenu
 # Não usar alsa
-modules-right=pulseaudio cpu memory xbacklight battery alsa xkeyboard wlan eth date
+modules-right=cpu memory xbacklight battery alsa xkeyboard wlan eth date
 
 tray-offset-x = -160
 ; tray-background = "%{B#427241 F#000000}%{B#427241 F#ffffff}"
