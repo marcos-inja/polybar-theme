@@ -218,6 +218,29 @@ margin-bottom = 5
 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+    [module/pulseaudio]
+    type = internal/pulseaudio
+
+    format-volume = <ramp-volume><label-volume>
+    format-spacing = 0
+    ; label-volume = 
+    label-volume-foreground = ${root.foreground}
+    label-volume = " %percentage%% |"
+
+    ; format-muted-foreground = ${colors.foreground-alt}
+    format-muted-background = #667a8e
+    label-muted ="  muted |"
+
+    label-volume-background = #667a8e
+
+    ramp-volume-0 = " "
+    ramp-volume-1 = " "
+    ramp-volume-2 = " "
+    ramp-volume-background =#667a8e
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
     [module/alsa]
     type = internal/alsa
 
@@ -314,42 +337,6 @@ margin-bottom = 5
 
     label = %date%%time%
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-
-
-
-
-
-
-
-
-
-[module/pulseaudio]
-type = internal/pulseaudio
-
-; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
-; If not, uses default sink
-; sink = alsa_output.pci-0000_12_00.3.analog-stereo
-
-; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
-; Default: true
-use-ui-max = true
-
-; Interval for volume increase/decrease (in percent points)
-; Default: 5
-interval = 5
-format-volume = <ramp-volume> <bar-volume>
-label-volume = 
-label-volume-foreground = ${root.foreground}
-
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted =sound muted
-
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-
 
 [module/backlight-acpi]
 inherit = module/xbacklight
