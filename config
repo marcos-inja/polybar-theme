@@ -51,7 +51,7 @@ font-4 = siji:pixelsize=10;1
 
 
 modules-left = doi31 i3 doi32
-modules-right=cpu memory battery decor1 xbacklight alsa xkeyboard decor2 wlan eth decor4 date decor3
+modules-right= cpu memory battery decor1 xbacklight pulseaudio xkeyboard decor2 wlan eth decor4 date decor3
 enable-ipc = true
 
 tray-offset-x = -220
@@ -329,7 +329,7 @@ type = internal/pulseaudio
 
 ; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
 ; If not, uses default sink
-sink = alsa_output.pci-0000_12_00.3.analog-stereo
+; sink = alsa_output.pci-0000_12_00.3.analog-stereo
 
 ; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
 ; Default: true
