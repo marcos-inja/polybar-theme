@@ -241,29 +241,6 @@ margin-bottom = 5
 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-    [module/alsa]
-    type = internal/alsa
-
-    format-volume = <ramp-volume><label-volume>
-    format-spacing = 0
-    ; label-volume = 
-    label-volume-foreground = ${root.foreground}
-    label-volume = " %percentage%% |"
-
-    ; format-muted-foreground = ${colors.foreground-alt}
-    format-muted-background = #667a8e
-    label-muted ="  muted |"
-
-    label-volume-background = #667a8e
-
-    ramp-volume-0 = " "
-    ramp-volume-1 = " "
-    ramp-volume-2 = " "
-    ramp-volume-background =#667a8e
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-
-
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
     [module/xkeyboard]
     type = internal/xkeyboard
     blacklist-0 =num lock
@@ -338,7 +315,32 @@ margin-bottom = 5
     label = %date%%time%
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
+
+
+;; don't use or use haha
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+    [module/alsa]
+    type = internal/alsa
+
+    format-volume = <ramp-volume><label-volume>
+    format-spacing = 0
+    ; label-volume = 
+    label-volume-foreground = ${root.foreground}
+    label-volume = " %percentage%% |"
+
+    ; format-muted-foreground = ${colors.foreground-alt}
+    format-muted-background = #667a8e
+    label-muted ="  muted |"
+
+    label-volume-background = #667a8e
+
+    ramp-volume-0 = " "
+    ramp-volume-1 = " "
+    ramp-volume-2 = " "
+    ramp-volume-background =#667a8e
+
+
+    [module/backlight-acpi]
+    inherit = module/xbacklight
+    type = internal/backlight
+    card = intel_backlight
