@@ -218,8 +218,8 @@ margin-bottom = 5
 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-    [module/pulseaudio]
-    type = internal/pulseaudio
+    [module/alsa]
+    type = internal/alsa
 
     format-volume = <ramp-volume><label-volume>
     format-spacing = 0
@@ -278,7 +278,9 @@ margin-bottom = 5
     label-connected-foreground = #000
     ; label-connected = "Con"
 
-    format-disconnected =
+    format-disconnected = "No lan | "
+    format-disconnected-background = #7fbe9e
+    format-disconnected-foreground = #000
     ramp-signal-foreground = #000
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -296,7 +298,9 @@ margin-bottom = 5
 
     label-connected-foreground = #000
     label-connected-background = #7fbe9e
-    format-disconnected =
+    format-disconnected = "No eth"
+    format-disconnected-foreground = #000
+    format-disconnected-background = #7fbe9e
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 
@@ -317,30 +321,35 @@ margin-bottom = 5
 
 
 
-;; don't use or use haha
-;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-    [module/alsa]
-    type = internal/alsa
-
-    format-volume = <ramp-volume><label-volume>
-    format-spacing = 0
-    ; label-volume = 
-    label-volume-foreground = ${root.foreground}
-    label-volume = " %percentage%% |"
-
-    ; format-muted-foreground = ${colors.foreground-alt}
-    format-muted-background = #667a8e
-    label-muted ="  muted |"
-
-    label-volume-background = #667a8e
-
-    ramp-volume-0 = " "
-    ramp-volume-1 = " "
-    ramp-volume-2 = " "
-    ramp-volume-background =#667a8e
 
 
-    [module/backlight-acpi]
-    inherit = module/xbacklight
-    type = internal/backlight
-    card = intel_backlight
+
+
+
+
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <ramp-volume><label-volume>
+format-spacing = 0
+; label-volume = 
+label-volume-foreground = ${root.foreground}
+label-volume = " %percentage%% |"
+
+; format-muted-foreground = ${colors.foreground-alt}
+format-muted-background = #667a8e
+label-muted ="  muted |"
+
+label-volume-background = #667a8e
+
+ramp-volume-0 = " "
+ramp-volume-1 = " "
+ramp-volume-2 = " "
+ramp-volume-background =#667a8e
+
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
